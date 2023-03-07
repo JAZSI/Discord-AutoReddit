@@ -8,7 +8,7 @@ This is a Node.js class called `AutoReddit`, which is designed to help automate 
 
 ## Installation
 1. Download or clone the `AutoReddit` class file to your local computer.
-2. Install the required dependencies by running npm install snoowrap in your terminal.
+2. Install the required dependencies by running `npm install` or `npm init -y && npm install snoowrap node-fetch@2.6.7` in your terminal.
 Usage
 Here is a basic example on how to use the `AutoReddit` class:
 ```js
