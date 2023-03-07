@@ -1,6 +1,6 @@
 # Discord AutoReddit
 
-A Node.js class, which is designed to help automate posting content from various subreddits to Discord using webhooks. It uses the Snoowrap library to access Reddit's API and fetches new content from subreddits.
+This is a Node.js class called `AutoReddit`, which is designed to help automate posting content from various subreddits to Discord using webhooks. It uses the Snoowrap library to access Reddit's API and fetches new content from subreddits.
 
 ## Prerequisites
 - Node.js installed on your computer.
@@ -25,6 +25,18 @@ const autoReddit = new AutoReddit({
 });
 
 autoReddit.start();
+```
+or
+```js
+const AutoReddit = require("./AutoReddit (fetch only no snoowrap)");
+
+const bot = new AutoReddit({
+  subredditsFilePath: "./subreddits.json",
+  interval: 10000, // 10 seconds,
+  limit: 100
+});
+
+bot.start();
 ```
 This example creates a new instance of the `AutoReddit` class, passing in the required parameters for authentication to Reddit's API, the path to the file where the subreddits are stored, and the interval at which new content is fetched from Reddit. It then calls the `start` method to begin fetching new content and posting it to Discord.
 
