@@ -6,6 +6,7 @@ class AutoReddit {
     this.intervalId = null;
     this.subredditsFilePath = subredditsFilePath;
     this.interval = interval;
+    this.limit = limit;
   }
 
   async start() {
@@ -163,7 +164,7 @@ class AutoReddit {
   async _reddit(subreddit, random = false) {
     try {
       const response = await fetch(
-        `https://www.reddit.com/r/${subreddit}/hot.json?limit=100`
+        `https://www.reddit.com/r/${subreddit}/hot.json?limit=${limit}`
       );
       if (!response.ok) {
         throw new Error(response.statusText);
